@@ -9,7 +9,6 @@ body {
 }
 
 #logo img {
-    /* use percentages instead of fixed values */
     height: 60px;
     width: auto;
 }
