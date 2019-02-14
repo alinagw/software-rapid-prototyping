@@ -1,0 +1,109 @@
+body {
+    font-size: 12px;
+}
+
+#content {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+#logo img {
+    /* use percentages instead of fixed values */
+    height: 60px;
+    width: auto;
+}
+
+header img {
+    width: 100%;
+    margin: 4px 0px;
+}
+
+nav {
+    /* override browser defaults */
+    padding: 0;
+    /* use percentages instead of fixed values */
+    width: 100%;
+    background-color: #d3dbe5;
+    margin-top: 12%;
+}
+
+nav ul {
+    /* override browser defaults */
+    padding: 0;
+    border: 0;
+    margin: auto;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+nav li:hover, nav li.active {
+    color: #FFFFFF;
+    background-color: #059BD8;
+}
+
+main {
+    width: 90%;
+    margin: auto;
+}
+
+section {
+    /* override browser defaults */
+    padding: 0;
+    margin: 0;
+}
+
+article {
+    width: 20%;
+    padding: 1%;
+    display: inline-block;
+    background-color: #fdabce;
+}
+
+article img {
+    width: 100%;
+}
+
+article h2 {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+
+article p {
+    font-size: 10px;
+}
+
+footer {
+    background-color: #b3def2;
+    margin-top: 15px;
+    overflow: auto;
+}
+
+#footer-left {
+    /* override browser defaults */
+    width: 45%;
+    margin: 1%;
+    padding: 4;
+    float: left;
+}
+
+#footer-right {
+    /* override browser defaults */
+    width: 39%;
+    margin: 1%;
+    padding: 4;
+    float: right;
+}
+
+#footer-right img {
+    width: 100%;
+}
