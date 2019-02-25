@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- title -->
+    <title>Intro to Vue</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+
+    <!-- add Vue here -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <!-- custom CSS and JS -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" async></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- HEADER -->
+        <div class="container mt-4 text-center">
+
+            <!-- title -->
+            <h1>My Collection of Cats</h1>
+
+            <!-- subtitle -->
+            <h5 class="text-muted">
+                I have {{ numCats }} cats.
+                <span v-if="numCats === 0">😿 That makes me so sad.</span>
+                <span v-else-if="numCats > 5">😻 That makes me a crazy cat lady!</span>
+                <span v-else>😺 That's pretty great!</span>
+            </h5>
+        </div>
+
+        <!-- CAT COLLECTION -->
+        <div class="container mt-5">
+
+            <!-- gallery of cats -->
+            <div id="cats" class="card-deck">
+
+                <!-- cat card -->
+                <div v-for="cat in cats" :class="{ 'fav-cat': cat === favCat }" class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+                        class="card-img-top" :alt="'Photo of ' + cat">
+                    <div class="card-body text-center">
+
+                        <!-- cat name -->
+                        <h5 class="card-title">{{ cat }}</h5>
+
+                        <!-- remove cat button -->
+                        <button type="button" class="btn btn-danger btn-sm" @click="removeCat(cat)">Remove</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- CAT FORM -->
+        <div class="container my-5">
+
+            <!-- add a cat -->
+            <h5 class="mb-3">Add a Cat</h5>
+            <form class="form-inline mb-5">
+
+                <!-- cat name input-->
+                <div class="form-group mr-3">
+                    <input type="text" class="form-control" placeholder="Cat name" v-model="newCatName">
+                </div>
+
+                <!-- add cat button -->
+                <button type="button" class="btn btn-primary" @click="addCat">
+                    Add {{ newCatName }}
+                </button>
+            </form>
+
+            <!-- update favorite cat -->
+            <h5 class="mb-3">Update Favorite Cat</h5>
+            <form class="form-inline mb-5">
+
+                <!-- favorite cat select -->
+                <select id="fav-cat-select" class="custom-select mr-3" v-model="favCat">
+                    <option selected>Select cat...</option>
+                    <option v-for="cat in cats" :value="cat">
+                        {{ cat }}
+                    </option>
+                </select>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- title -->
+    <title>Intro to Vue</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+
+    <!-- add Vue here -->
+
+    <!-- custom CSS and JS -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" async></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="container mt-4 text-center">
+
+        <!-- title -->
+        <h1>My Collection of Cats</h1>
+
+        <!-- subtitle -->
+        <h5 class="text-muted">
+            I have 0 cats.
+            😿 That makes me so sad.
+            <!--
+                😻 That makes me a crazy cat lady!
+                😺 That's pretty great!
+            -->
+        </h5>
+        
+    </div>
+
+    <!-- CAT COLLECTION -->
+    <div class="container mt-5">
+
+        <!-- gallery of cats -->
+        <div id="cats" class="card-group">
+
+            <!-- cat card -->
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg" class="card-img-top"
+                    alt="Cat Photo">
+                <div class="card-body text-center">
+
+                    <!-- cat name -->
+                    <h5 class="card-title">Cat Name</h5>
+
+                    <!-- remove cat button -->
+                    <button id="remove-cat-btn" type="button" class="btn btn-danger btn-sm">Remove</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CAT FORM -->
+    <div class="container my-5">
+
+        <!-- add a cat -->
+        <h5 class="mb-3">Add a Cat</h5>
+        <form class="form-inline mb-5">
+            
+            <!-- cat name input-->
+            <div class="form-group mr-3">
+                <input type="text" class="form-control" id="new-cat-name" placeholder="Cat name">
+            </div>
+            
+            <!-- add cat button -->
+            <button id="add-cat-btn" type="button" class="btn btn-primary">
+                Add Cat
+            </button>
+        </form>
+
+        <!-- update favorite cat -->
+        <h5 class="mb-3">Update Favorite Cat</h5>
+        <form class="form-inline">
+
+            <!-- favorite cat select -->
+            <select id="fav-cat-select" class="custom-select mr-3">
+                <option selected>Select cat...</option>
+            </select>
+
+            <!-- update button -->
+            <button id="add-cat-btn" type="button" class="btn btn-primary">
+                Save
+            </button>
+        </form>
+    </div>
+</body>
+
+</html>

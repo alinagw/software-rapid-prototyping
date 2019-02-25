@@ -1,0 +1,29 @@
+#cats .card {
+    max-width: 100%;
+}
+
+@media (min-width: 576px) {
+    #cats .card {
+        min-width: calc(50% - 30px);
+        max-width: calc(50% - 30px);
+    }
+}
+
+@media (min-width: 768px) {
+    #cats .card {
+        min-width: calc(33% - 30px);
+        max-width: calc(33% - 30px);
+    }
+}
+
+@media (min-width: 992px) {
+    #cats .card {
+        min-width: calc(25% - 30px);
+        max-width: calc(25% - 30px);
+    }
+}
+
+.fav-cat {
+    background-color: #17a2b8 !important;
+    color: white;
+}
